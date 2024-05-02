@@ -11,6 +11,7 @@ public class Open_Meta_Browser extends TestBase{
 	static WebDriver driver;
 	
 	public static void openBrowser() {
+		System.out.println("Start test case");
 		driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/textarea")).sendKeys("Meta.com");
 		driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/textarea")).sendKeys(Keys.ENTER);
 		

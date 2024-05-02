@@ -22,12 +22,13 @@
 
 
 		<!--
-		https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager 
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
 			<version>5.2.1</version>
 		</dependency>
+		 -->
 
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -134,11 +135,7 @@
 			<version>3.6</version>
 		</dependency>
 
-		<dependency>
-			<groupId>FunctionalTestCases</groupId>
-			<artifactId>AWC_TeamCenter</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		
 	</dependencies>
 
 
@@ -163,6 +160,14 @@
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
+          <configuration>
+			  <forkCount>3</forkCount>
+			  <reuseForks>true</reuseForks>
+			  <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
+			  <suiteXmlFiles>
+				  <suiteXmlFile>C:\Users\ManojTambe\git\FCw\FCTweb\testng.xml</suiteXmlFile>
+			  </suiteXmlFiles>
+		  </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
